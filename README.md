@@ -18,8 +18,7 @@ A soothing pastel theme for [Typora](https://typora.io/), based on the [Catppucc
 5. Copy/move the `catppuccin.css` file into the opened folder.
 6. Restart Typora, or simply select `Catppuccin` from the Themes menu.
 
-##  فون Fonts (Offline Use)
-
+## Fonts (Offline Use)
 By default, the theme imports [Inter](https://fonts.google.com/specimen/Inter) and [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) from Google Fonts. If you plan to use Typora completely offline, you can remove the `@import` line at the very top of the `catppuccin.css` file and install the fonts locally on your operating system.
 
 ## 💝 Credits
