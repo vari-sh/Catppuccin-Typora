@@ -170,38 +170,48 @@ a:hover {
 #write h4,
 #write h5,
 #write h6 {
-  margin-top: 0.5em;
-  margin-bottom: 0em;
-  line-height: 1em;
-  padding-top: 0.3em;
+  margin-top: 1.2em;
+  margin-bottom: 0.3em;
+  line-height: 1.3em;
+  padding-top: 0;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 #write h1 {
   font-size: 2em;
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid var(--text-color3);
+  color: var(--cat-mauve);
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid var(--cat-surface1);
+  margin-top: 0.5em;
 }
 
 #write h2 {
   font-size: 1.5em;
+  color: var(--cat-blue);
   padding-bottom: 0.3em;
-  border-bottom: 1px solid var(--text-color3);
+  border-bottom: 1px solid var(--cat-surface0);
 }
 
 #write h3 {
   font-size: 1.25em;
+  color: var(--cat-sapphire);
 }
 
 #write h4 {
-  font-size: 1em;
+  font-size: 1.05em;
+  color: var(--cat-sky);
 }
 
 #write h5 {
-  font-size: .875em;
+  font-size: .9em;
+  color: var(--cat-teal);
 }
 
 #write h6 {
   font-size: .85em;
+  color: var(--cat-green);
+  font-style: italic;
 }
 
 /* horizontal divider */
@@ -219,10 +229,12 @@ ol {
 
 /* blockquote */
 blockquote {
-  border-left: 4px solid var(--text-color1);
-  padding: 4px 15px;
-  color: var(--text-color1);
-  background-color: var(--bg-color5);
+  border-left: 3px solid var(--cat-mauve);
+  padding: 8px 16px;
+  color: var(--cat-subtext1);
+  background-color: rgba(203, 166, 247, 0.06);
+  border-radius: 0 6px 6px 0;
+  margin: 1em 0;
 }
 
 blockquote blockquote {
@@ -230,38 +242,42 @@ blockquote blockquote {
 }
 
 table thead tr {
-  background-color: var(--table-thead-color);
+  background-color: var(--cat-surface0);
 }
 
 table tr th {
-  font-weight: bold;
-  border-left: 1px solid var(--table-border-color);
-  border-right: 1px solid var(--table-border-color);
+  font-weight: 600;
+  border-left: 1px solid var(--cat-surface1);
+  border-right: 1px solid var(--cat-surface1);
   text-align: left;
   margin: 0;
-  padding: 6px 13px;
+  padding: 8px 14px;
+  color: var(--cat-lavender);
+  letter-spacing: 0.02em;
+  font-size: 0.9em;
+  text-transform: uppercase;
 }
 
 table tbody tr {
-  border-top: 1px solid var(--table-border-color);
+  border-top: 1px solid var(--cat-surface0);
   margin: 0;
   padding: 0;
 }
 
 table tbody tr:nth-child(2n) {
-  background-color: var(--table-bg-darker-color);
+  background-color: rgba(24, 24, 37, 0.5);
 }
 
 table tbody tr:nth-child(2n + 1) {
-  background-color: var(--table-bg-color);
+  background-color: transparent;
 }
 
 table tr td {
-  border-left: 1px solid var(--table-border-color);
-  border-right: 1px solid var(--table-border-color);
+  border-left: 1px solid var(--cat-surface0);
+  border-right: 1px solid var(--cat-surface0);
   text-align: left;
   margin: 0;
-  padding: 6px 13px;
+  padding: 8px 14px;
 }
 
 table tr th:first-child,
@@ -624,9 +640,9 @@ input[type="radio"]:checked:before {
 
 /* file item active */
 #file-library .file-list-item.active {
-  background-color: var(--hover-bg-color1);
-  color: var(--text-color1);
-  border-color: var(--cat-pink);
+  background-color: rgba(203, 166, 247, 0.1);
+  color: var(--cat-text);
+  border-color: var(--cat-mauve);
 }
 
 /* suffix of file item*/
@@ -690,19 +706,23 @@ input[type="radio"]:checked:before {
 
 /* sidebar button in setting menu */
 .nav-group-item {
-  color: var(--text-color2) !important;
-  border-top-left-radius: 6px !important;
-  border-bottom-left-radius: 6px !important;
-  border-top-right-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
+  color: var(--cat-subtext1) !important;
+  border-radius: 6px !important;
+  margin: 2px 6px !important;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 /* sidebar button hover in setting menu */
 .nav-group-item:hover,
-.nav-group-item:active,
+.nav-group-item:active {
+  background-color: var(--cat-surface0) !important;
+  color: var(--cat-text) !important;
+}
+
 .nav-group-item.active {
-  background-color: var(--hover-bg-color1) !important;
-  color: var(--hover-text-color) !important;
+  background-color: rgba(203, 166, 247, 0.15) !important;
+  color: var(--cat-mauve) !important;
+  font-weight: 600;
 }
 
 /* remove up and down button from number type input*/
@@ -721,14 +741,17 @@ div[data-index="2"] .label-input-group td:last-child div {
 
 /* button in setting menu */
 .ty-preferences button.btn-default {
-  border: 0px;
-  background-color: var(--bg-color5);
+  border: 1px solid var(--cat-surface1);
+  background-color: var(--cat-surface0);
   border-radius: 6px;
+  color: var(--cat-text);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
 /* button hover in setting menu */
 .ty-preferences .btn-default:not([disabled]):hover {
-  background-color: var(--hover-bg-color1) !important;
+  background-color: var(--cat-surface1) !important;
+  border-color: var(--cat-overlay0) !important;
 }
 
 /* return button in setting menu */
@@ -830,11 +853,18 @@ select[disabled]:hover {
 
 /* long button in mega menu */
 .long-btn {
-  border: 0px;
-  background-color: var(--bg-color5);
-  color: var(--text-color1);
+  border: 1px solid var(--cat-surface1);
+  background-color: var(--cat-surface0);
+  color: var(--cat-text);
   margin-bottom: 10px;
   margin-left: 10px;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.long-btn:hover {
+  background-color: var(--cat-surface1) !important;
+  border-color: var(--cat-overlay0) !important;
 }
 
 /* recent file in mega menu */
@@ -940,22 +970,21 @@ footer.ty-footer {
 
 /* scrollbar */
 ::-webkit-scrollbar {
-  width: 12px !important;
-  background-color: var(--scrollbar-track-color) !important;
+  width: 8px !important;
+  background-color: transparent !important;
 }
 
 /* scrollbar track */
 ::-webkit-scrollbar-track {
-  background-color: var(--scrollbar-track-color) !important;
+  background-color: transparent !important;
   border-radius: 0px;
 }
 
 /* scrollbar thumb */
 ::-webkit-scrollbar-thumb {
   background-color: var(--cat-surface1) !important;
-  border-radius: 10px !important;
-  /* Il trucco del bordo crea lo spazio intorno alla barra senza tagliarla */
-  border: 3px solid var(--scrollbar-track-color) !important;
+  border-radius: 8px !important;
+  border: 2px solid var(--cat-base) !important;
   min-height: 40px;
 }
 
@@ -1018,21 +1047,24 @@ footer.ty-footer {
 /* inline codeblock */
 code {
   font-family: var(--monospace);
-  font-size: 0.9em;
-  background-color: var(--bg-color5);
-  border-radius: 6px;
-  padding: 4px 4px 4px 4px;
-  margin: 0px 0px 0px 0px;
+  font-size: 0.85em;
+  background-color: var(--cat-crust);
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin: 0 1px;
+  color: var(--cat-peach);
+  border: 1px solid var(--cat-surface0);
 }
 
 /* codeblock */
 .md-fences,
 .md-fences:active {
-  background-color: var(--bg-color5);
-  border-radius: 6px;
-  padding: 8px 4px 8px 4px !important;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  background-color: var(--cat-crust);
+  border-radius: 8px;
+  border: 1px solid var(--cat-surface0);
+  padding: 12px 4px 12px 4px !important;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .md-fences .code-tooltip {
@@ -1843,10 +1875,15 @@ g>text.slice {
 }
 
 kbd {
-  background: var(--bg-color5);
-  color: var(--text-color1);
+  background: var(--cat-surface0);
+  color: var(--cat-text);
   font-family: var(--monospace);
-  border-color: var(--menu-divider-color);
+  font-size: 0.8em;
+  border: 1px solid var(--cat-surface2);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 2px 6px;
+  box-shadow: inset 0 -1px 0 var(--cat-surface2);
 }
 
 /* syntax error and escape character fixes */
@@ -1867,4 +1904,149 @@ kbd {
 /* command line attributes and parameters */
 .cm-s-inner .cm-attribute {
   color: var(--cat-yellow) !important;
+}
+
+/* =============================================
+   MODERN REFINEMENTS (catppuccin v2)
+   ============================================= */
+
+/* smooth link transitions */
+a, #write a:not([role="menuitem"]) {
+  transition: color 0.15s ease;
+}
+
+/* horizontal rule with gradient */
+hr {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--cat-surface1), transparent);
+  border: 0;
+  margin: 1.5em 0;
+}
+
+/* modern focus ring */
+:focus-visible {
+  outline: 2px solid var(--cat-mauve);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* sidebar file item - smooth transitions */
+#file-library .file-list-item {
+  transition: background-color 0.12s ease, border-color 0.12s ease;
+}
+
+/* mark/highlight tag */
+mark {
+  background-color: rgba(249, 226, 175, 0.25);
+  color: var(--cat-yellow);
+  border-radius: 3px;
+  padding: 1px 3px;
+}
+
+/* selection color */
+::selection {
+  background-color: rgba(203, 166, 247, 0.3);
+  color: var(--cat-text);
+}
+
+/* strong/bold accent */
+#write strong {
+  color: var(--cat-peach);
+  font-weight: 700;
+}
+
+/* em/italic accent */
+#write em {
+  color: var(--cat-flamingo);
+  font-style: italic;
+}
+
+/* strikethrough */
+#write del {
+  color: var(--cat-overlay1);
+  text-decoration: line-through;
+}
+
+/* better footnote styling */
+sup.md-footnote {
+  color: var(--cat-mauve);
+  background-color: rgba(203, 166, 247, 0.12);
+  border-radius: 3px;
+  padding: 0 3px;
+  font-size: 0.75em;
+}
+
+/* input fields - modern look */
+input:not([type="checkbox"]):not([type="radio"]) {
+  background-color: var(--cat-crust) !important;
+  border: 1px solid var(--cat-surface1) !important;
+  border-radius: 6px !important;
+  color: var(--cat-text) !important;
+  transition: border-color 0.15s ease !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus {
+  border-color: var(--cat-mauve) !important;
+  outline: none !important;
+}
+
+/* select inputs */
+select {
+  background-color: var(--cat-crust) !important;
+  border: 1px solid var(--cat-surface1) !important;
+  border-radius: 6px;
+  color: var(--cat-text) !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  transition: border-color 0.15s ease;
+}
+
+select:not([disabled]):hover {
+  border-color: var(--cat-overlay0) !important;
+  color: var(--cat-text);
+  opacity: 1;
+}
+
+select:focus {
+  border-color: var(--cat-mauve) !important;
+  outline: none;
+}
+
+/* tooltip modernization */
+#ty-tooltip {
+  background-color: var(--cat-surface0);
+  color: var(--cat-text);
+  border: 1px solid var(--cat-surface1);
+  border-radius: 6px;
+  font-size: 0.8em;
+  padding: 4px 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* context menu modernization */
+.dropdown-menu:not(.megamenu-menu-list) {
+  background-color: var(--cat-mantle);
+  color: var(--cat-text);
+  border: 1px solid var(--cat-surface0);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  padding: 4px;
+}
+
+.dropdown-menu>li>a {
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.dropdown-menu>li>a:hover {
+  background-color: var(--cat-surface0);
+  color: var(--cat-mauve);
+}
+
+/* search panel modernization */
+#md-searchpanel {
+  background-color: var(--cat-mantle);
+  border-bottom: 1px solid var(--cat-surface0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
