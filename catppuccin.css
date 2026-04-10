@@ -32,55 +32,53 @@
 
   /* Custom colors for Typora */
   --cat-text-fade: rgba(205, 214, 244, 0.5);
-  --cat-mantle: #181825;
 
-  /* dark color for background*/
+  /* Dark background colors */
   --bg-color1: var(--cat-base);
   --bg-color2: var(--cat-mantle);
   --bg-color3: var(--cat-mantle);
   --bg-color4: var(--cat-surface1);
   --bg-color5: var(--cat-mantle);
   
-  /* light color for text and icon*/
+  /* Light text and icon colors */
   --text-color1: var(--cat-text);
   --text-color2: var(--cat-text);
   --text-color3: var(--cat-surface1);
   --text-color4: var(--cat-text);
   --text-color5: var(--cat-text-fade);
   
-  /* link color */
+  /* Link color */
   --link-color: var(--cat-sky);
   
-  /* table color */
+  /* Table colors */
   --table-border-color: var(--cat-overlay0);
   --table-thead-color: var(--cat-surface1);
   --table-bg-color: var(--cat-base);
   --table-bg-darker-color: var(--cat-mantle);
   
-  /* hover color */
+  /* Hover colors */
   --hover-bg-color1: var(--cat-surface1);
   --hover-bg-color2: var(--cat-surface1);
   --hover-bg-color3: var(--cat-surface1);
   --hover-text-color: var(--cat-mauve);
   
-  /* active color */
+  /* Active and input colors */
   --active-color: var(--hover-bg-color1);
-  /* input color */
   --input-color: var(--cat-surface1);
-  /* menu divider color */
+  
+  /* UI Divider and scrollbar colors */
   --menu-divider-color: var(--cat-overlay0);
-  /* scrollbar color */
   --scrollbar-thumb-color: var(--cat-overlay0);
   --scrollbar-track-color: var(--cat-base);
-  /* theme select color */
+  
+  /* Selection and focus colors */
   --theme-select-color: var(--cat-surface1);
   --button-color: var(--cat-overlay0);
   --select-color: var(--cat-base);
-  /* focus color */
   --focus-color: var(--cat-sky);
   --focus-ring-color: var(--focus-color);
   
-  /* codeblock color */
+  /* Codeblock colors */
   --code-red-color: var(--cat-red);
   --code-yellow-color: var(--cat-yellow);
   --code-cyan-color: var(--cat-teal);
@@ -93,33 +91,34 @@
   --code-select-bg-color: var(--cat-surface1);
   --code-cursor-color: var(--cat-text);
   
-  /* implicit selection text bg color */
+  /* Implicit selection text background color */
   --select-text-bg-color: var(--cat-overlay0);
-  /* implicit button color */
+  
+  /* Implicit button colors */
   --primary-color: var(--button-color);
   --primary-btn-border-color: transparent;
   --primary-btn-text-color: var(--text-color2);
-  /* implicit sidebar color */
+  
+  /* Implicit sidebar colors */
   --side-bar-bg-color: var(--cat-mantle);
   --control-text-color: var(--text-color2);
-  /* implicit text color */
+  
+  /* Implicit background and text colors */
   --text-color: var(--text-color1);
-  /* implicit background color for setting menu */
   --bg-color: var(--bg-color1);
-  /* implicit hover color */
+  
+  /* Implicit hover and active colors */
   --item-hover-bg-color: var(--hover-bg-color1);
   --item-hover-text-color: var(--hover-text-color);
-  /* implicit active color */
   --active-file-bg-color: var(--hover-bg-color1);
-  /* implicit mathjax edit panel background color */
+  
+  /* Implicit specific panel colors */
   --rawblock-edit-panel-bd: var(--bg-color5);
-  /* implicit focus mode color */
   --blur-text-color: var(--text-color5);
-  /* implicit search result select color */
   --search-select-bg-color: var(--cat-overlay0);
-
   --control-text-hover-color: var(--cat-surface1);
-  /* implicit active file color in sidebar file menu tree view */
+  
+  /* Implicit active file color in sidebar tree view */
   --active-file-text-color: var(--text-color1);
   --active-file-border-color: var(--cat-mauve);
 
@@ -129,7 +128,7 @@
   --monospace: 'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace;
 }
 
-/* basic style */
+/* Basic styling */
 html {
   font-size: 16px;
 }
@@ -141,143 +140,137 @@ body {
   line-height: 1.6;
 }
 
+/* Links with modern transitions */
 a {
   color: var(--cat-sky);
+  transition: color 0.2s ease-in-out;
 }
 
 a:hover {
   color: var(--cat-mauve);
 }
 
-/* text selection background color */
+/* Text selection background color */
 .in-text-selection {
   background-color: var(--cat-surface1);
 }
 
-/* link */
+/* Write area links */
 #write a:not([role="menuitem"]) {
   color: var(--link-color) !important;
+  transition: color 0.2s ease-in-out;
 }
 
 #write a:not([role="menuitem"]):hover {
   color: var(--hover-text-color) !important;
 }
 
-/* h1-h6 */
+/* Headings with modernized tight tracking */
 #write h1,
 #write h2,
 #write h3,
 #write h4,
 #write h5,
 #write h6 {
-  margin-top: 1.2em;
-  margin-bottom: 0.3em;
-  line-height: 1.3em;
-  padding-top: 0;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+  line-height: 1.2em;
+  padding-top: 0.3em;
+  letter-spacing: -0.02em;
 }
 
 #write h1 {
-  font-size: 2em;
-  color: var(--cat-mauve);
-  padding-bottom: 0.4em;
-  border-bottom: 2px solid var(--cat-surface1);
-  margin-top: 0.5em;
+  font-size: 2.2em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--text-color3);
 }
 
 #write h2 {
-  font-size: 1.5em;
-  color: var(--cat-blue);
+  font-size: 1.6em;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid var(--cat-surface0);
+  border-bottom: 1px solid var(--text-color3);
 }
 
 #write h3 {
-  font-size: 1.25em;
-  color: var(--cat-sapphire);
+  font-size: 1.3em;
 }
 
 #write h4 {
-  font-size: 1.05em;
-  color: var(--cat-sky);
+  font-size: 1.1em;
 }
 
 #write h5 {
   font-size: .9em;
-  color: var(--cat-teal);
 }
 
 #write h6 {
   font-size: .85em;
-  color: var(--cat-green);
-  font-style: italic;
 }
 
-/* horizontal divider */
+/* Horizontal divider */
 hr {
   height: 1px;
   background-color: var(--text-color5);
   border: 0px;
 }
 
-/* list */
+/* Lists */
 ul,
 ol {
   padding-left: 30px;
 }
 
-/* blockquote */
+/* Blockquote modernized */
 blockquote {
-  border-left: 3px solid var(--cat-mauve);
+  border-left: 4px solid var(--cat-mauve);
   padding: 8px 16px;
-  color: var(--cat-subtext1);
-  background-color: rgba(203, 166, 247, 0.06);
-  border-radius: 0 6px 6px 0;
-  margin: 1em 0;
+  color: var(--text-color1);
+  background-color: var(--cat-surface0);
+  border-radius: 4px 8px 8px 4px;
 }
 
 blockquote blockquote {
   padding-right: 0em;
 }
 
+/* Tables */
+table {
+  border-collapse: collapse;
+}
+
 table thead tr {
-  background-color: var(--cat-surface0);
+  background-color: var(--table-thead-color);
 }
 
 table tr th {
-  font-weight: 600;
-  border-left: 1px solid var(--cat-surface1);
-  border-right: 1px solid var(--cat-surface1);
+  font-weight: bold;
+  border-left: 1px solid var(--table-border-color);
+  border-right: 1px solid var(--table-border-color);
   text-align: left;
   margin: 0;
-  padding: 8px 14px;
-  color: var(--cat-lavender);
-  letter-spacing: 0.02em;
-  font-size: 0.9em;
-  text-transform: uppercase;
+  padding: 8px 16px;
 }
 
 table tbody tr {
-  border-top: 1px solid var(--cat-surface0);
+  border-top: 1px solid var(--table-border-color);
   margin: 0;
   padding: 0;
 }
 
 table tbody tr:nth-child(2n) {
-  background-color: rgba(24, 24, 37, 0.5);
+  background-color: var(--table-bg-darker-color);
 }
 
 table tbody tr:nth-child(2n + 1) {
-  background-color: transparent;
+  background-color: var(--table-bg-color);
 }
 
 table tr td {
-  border-left: 1px solid var(--cat-surface0);
-  border-right: 1px solid var(--cat-surface0);
+  border-left: 1px solid var(--table-border-color);
+  border-right: 1px solid var(--table-border-color);
   text-align: left;
   margin: 0;
-  padding: 8px 14px;
+  padding: 8px 16px;
 }
 
 table tr th:first-child,
@@ -290,93 +283,99 @@ table tr td:last-child {
   border-right-width: 0px;
 }
 
-/* table edit panel */
+/* Table edit panel */
 .ty-table-edit {
   background-color: var(--bg-color3);
   border: 0px;
-  border-radius: 6px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 6px;
-  padding-right: 6px;
+  border-radius: 8px;
+  padding: 4px 8px;
   margin-top: -29px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* button on table edit panel */
+/* Button on table edit panel */
 .ty-table-edit button {
   background-color: transparent;
   color: var(--text-color2);
   border: 0px;
   margin-left: 0px !important;
+  transition: all 0.2s ease;
+  border-radius: 4px;
 }
 
-/* button hover on table edit panel */
+/* Button hover on table edit panel */
 .ty-table-edit button:hover {
   background-color: var(--hover-bg-color3);
   color: var(--hover-text-color);
 }
 
-/* adjusting table panel */
+/* Adjusting table panel */
 .popover {
   background-color: var(--bg-color2);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--cat-surface0);
 }
 
-/* arrow of adjusting table panel */
+/* Arrow of adjusting table panel */
 .popover.bottom>.arrow:after {
   border-bottom-color: var(--bg-color2);
 }
 
-/* divider in adjust table panel */
+/* Divider in adjust table panel */
 .md-grid-board-wrap .popover-title {
   border-top-color: var(--menu-divider-color);
 }
 
-/* grid size */
+/* Grid size */
 .md-grid-board a {
   width: 15px;
   height: 15px;
+  border-radius: 2px;
 }
 
-/* existing thread grid */
+/* Existing thread grid */
 .md-grid-board tr[row="1"] .md-grid-ext {
   background-color: var(--cat-surface1);
 }
 
-/* not existing thread grid */
+/* Not existing thread grid */
 .md-grid-board tr[row="1"] {
   background-color: var(--cat-surface1);
 }
 
-/* existing grid */
+/* Existing grid */
 .md-grid-board .md-grid-ext {
   background-color: var(--cat-surface1);
 }
 
-/* selected thread grid */
+/* Selected thread grid */
 .md-grid-board tr[row="1"] a.md-active,
 .md-grid-board tr[row="1"] a:hover {
   background-color: var(--cat-surface1);
 }
 
-/* selected grid */
+/* Selected grid */
 .md-grid-board a.md-active,
 .md-grid-board a:hover {
   border-color: var(--menu-divider-color);
   background-color: var(--cat-surface1);
 }
 
-/* task */
+/* Tasks */
 .md-task-list-item>input {
   margin-left: -1.3em;
 }
 
-/* footnote */
+/* Footnotes */
 sup.md-footnote {
   color: var(--text-color1);
   background-color: var(--bg-color2);
+  border-radius: 4px;
+  padding: 0 4px;
 }
 
-/* mathjax */
+/* Mathjax */
 .md-inline-math script {
   color: var(--text-color1);
 }
@@ -386,38 +385,40 @@ sup.md-footnote {
 }
 
 .md-rawblock>.md-rawblock-container {
-  transition: 0.5s;
+  transition: 0.3s ease;
 }
 
 .md-rawblock>.md-rawblock-tooltip {
-  transition: 0.5s;
+  transition: 0.3s ease;
   display: block;
   visibility: hidden;
   opacity: 0;
+  border-radius: 8px;
 }
 
 .md-rawblock:hover>.md-rawblock-tooltip {
-  transition: 0.5s;
   visibility: visible;
   opacity: 1;
   animation: none;
 }
 
-/* meta information of image */
+/* Meta information of image */
 .md-image>.md-meta {
   border: 0px;
-  padding: 2px 0px 0px 4px;
+  padding: 4px 0px 0px 4px;
   font-size: 0.9em;
   color: var(--text-color1);
 }
 
-/* input */
+/* Input fields */
 input {
   background-color: var(--input-color) !important;
   border: 0px !important;
+  border-radius: 4px;
+  padding: 4px 8px;
 }
 
-/* checkbox */
+/* Checkbox */
 input[type="checkbox"]:before {
   content: "";
   display: inline-block;
@@ -426,13 +427,14 @@ input[type="checkbox"]:before {
   vertical-align: middle;
   text-align: center;
   border: 0px;
-  border-radius: 3px;
+  border-radius: 4px;
   background-color: var(--input-color);
   margin-top: -0.5rem;
   margin-left: -0.2rem;
+  transition: all 0.2s ease;
 }
 
-/* checkbox hover */
+/* Checkbox hover */
 input[type="checkbox"]:not([disabled]):not(:checked):hover:before {
   content: "\2713";
   font-size: 0.9rem;
@@ -440,23 +442,24 @@ input[type="checkbox"]:not([disabled]):not(:checked):hover:before {
   color: var(--text-color3);
 }
 
-/* checkbox checked*/
+/* Checkbox checked */
 input[type="checkbox"]:checked:before {
   content: "\2713";
   font-size: 0.9rem;
   line-height: 1.2rem;
   color: var(--text-color2);
+  background-color: var(--cat-mauve);
 }
 
-/* checkbox checked hover*/
+/* Checkbox checked hover */
 input[type="checkbox"]:checked:hover:before {
   content: "\2713";
   font-size: 0.9rem;
   line-height: 1.2rem;
-  color: var(--hover-text-color);
+  color: var(--cat-base);
 }
 
-/* radio */
+/* Radio buttons */
 input[type="radio"]:before {
   content: "";
   display: inline-block;
@@ -465,13 +468,14 @@ input[type="radio"]:before {
   vertical-align: middle;
   text-align: center;
   border: 0px;
-  border-radius: 0.55rem;
+  border-radius: 50%;
   background-color: var(--input-color);
   margin-top: -0.4rem;
   margin-left: -0.1rem;
+  transition: all 0.2s ease;
 }
 
-/* radio hover */
+/* Radio hover */
 input[type="radio"]:not([disabled]):not(:checked):hover:before {
   content: "\25CF";
   font-size: 1rem;
@@ -479,7 +483,7 @@ input[type="radio"]:not([disabled]):not(:checked):hover:before {
   color: var(--text-color3);
 }
 
-/* radio checked */
+/* Radio checked */
 input[type="radio"]:checked:before {
   content: "\25CF";
   font-size: 1rem;
@@ -487,68 +491,70 @@ input[type="radio"]:checked:before {
   color: var(--text-color2);
 }
 
-/* radio checked hover*/
+/* Radio checked hover */
 input[type="radio"]:checked:before {
   content: "\25CF";
   font-size: 1rem;
   line-height: 1rem;
-  color: var(--hover-text-color);
+  color: var(--cat-mauve);
 }
 
-/* default focus style */
+/* Default focus style */
 :focus {
   outline-color: var(--focus-color);
 }
 
-/* exit source view button */
+/* Exit source view button */
 .typora-sourceview-on #toggle-sourceview-btn {
   background-color: var(--bg-color2);
+  transition: background-color 0.2s ease;
+  border-radius: 8px;
 }
 
 .typora-sourceview-on #toggle-sourceview-btn:hover {
   background-color: var(--hover-bg-color1);
 }
 
-/* toc */
+/* Table of Contents (TOC) */
 .md-toc {
   background-color: var(--bg-color3);
-  border-radius: 6px;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-  border: 0px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--cat-surface0);
 }
 
-/* toc content */
+/* TOC content */
 .md-toc-content {
-  padding-top: 5px;
+  padding-top: 8px;
   padding-bottom: 8px;
   margin-top: 15px;
   margin-bottom: 0px;
 }
 
-/* remove outline when toc is selected */
+/* Remove outline when TOC is selected */
 .md-toc:focus .md-toc-content {
   border: 0px;
   margin: 0px;
 }
 
-/* toc item */
+/* TOC item */
 .md-toc-item {
   margin: 2px;
 }
 
-/* toc edit panel */
+/* TOC edit panel */
 #write div.md-toc-tooltip {
   border: 0px;
   padding-left: 10px;
   padding-right: 10px;
   background-color: var(--bg-color3);
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   opacity: 0;
   visibility: hidden;
   display: block !important;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 #write .md-toc:focus div.md-toc-tooltip {
@@ -561,141 +567,157 @@ input[type="radio"]:checked:before {
   border-top-right-radius: 0px;
 }
 
-/* toc delete button */
+/* TOC delete button */
 .md-delete-toc {
   background-color: transparent;
 }
 
-/* html block */
+/* HTML block */
 .md-htmlblock:hover .md-htmlblock-container {
-  border-radius: 6px;
+  border-radius: 8px;
   border-top-right-radius: 0px;
 }
 
-/* search panel */
+/* Search panel */
 #md-searchpanel {
   background-color: var(--bg-color2);
   color: var(--text-color2);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--cat-surface0);
 }
 
-/* ignore case button and find whole word button */
+/* Ignore case button and find whole word button */
 .searchpanel-search-option-btn {
   border: 0px;
+  transition: all 0.2s ease;
+  border-radius: 4px;
 }
 
-/* button on search panel */
+/* Button on search panel */
+#md-searchpanel .btn {
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
 #md-searchpanel .btn:hover {
   color: var(--hover-text-color);
   background-color: var(--hover-bg-color1) !important;
 }
 
-/* search option button hover */
+/* Search option button hover */
 .searchpanel-search-option-btn:not(.active):hover {
   color: var(--hover-text-color);
   background-color: var(--hover-bg-color1);
 }
 
-/* close button in search panel */
+/* Close button in search panel */
 #md-searchpanel .input-group-addon.close-btn {
   padding-left: 16px;
   padding-right: 16px;
 }
 
-/* replaceall button */
+/* Replace all button */
 .ty-replace-panel-row #search-panel-replaceall-btn {
   padding-left: 8px;
   padding-right: 6px !important;
 }
 
-/* replace button */
+/* Replace button */
 .ty-replace-panel-row #search-panel-replace-btn {
   padding-left: 16px;
   padding-right: 16px;
 }
 
-/* sidebar */
+/* Sidebar */
 .sidebar-menu {
   color: var(--text-color2);
 }
 
-/* divider between file item and search */
+/* Divider between file item and search */
 .ty-sidebar-search-panel {
   border-color: var(--menu-divider-color);
 }
 
-/* file item in sidebar */
+/* File item in sidebar */
 #file-library .file-list-item {
   border-bottom: 0px;
   opacity: 1;
-  border-left: 4px solid;
+  border-left: 4px solid transparent;
   border-color: var(--bg-color2);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-/* file item hover */
+/* File item hover */
 #file-library .file-list-item:hover {
   background-color: var(--hover-bg-color1);
   color: var(--text-color1);
   border-color: var(--hover-bg-color1);
 }
 
-/* file item active */
+/* File item active */
 #file-library .file-list-item.active {
   background-color: rgba(203, 166, 247, 0.1);
-  color: var(--cat-text);
+  color: var(--text-color1);
   border-color: var(--cat-mauve);
 }
 
-/* suffix of file item*/
+/* Suffix of file item */
 .file-list-item-file-ext-part {
   opacity: 0.8;
 }
 
-/* sidebar file menu */
+/* Sidebar file menu */
 #sidebar-files-menu {
   border: 0px;
 }
 
-/* sidebar file menu item */
+/* Sidebar file menu item */
 .dropdown-menu>li>a {
   color: var(--text-color2);
+  transition: color 0.2s ease;
 }
 
 .dropdown-menu>li>a:hover {
   color: var(--hover-text-color);
 }
 
-/* sidebar file menu close button */
+/* Sidebar file menu close button */
 #close-sidebar-menu-btn:hover {
   color: var(--hover-text-color);
 }
 
-/* sidebar file menu divider */
+/* Sidebar file menu divider */
 #sidebar-files-menu>.show+.menuitem-group-label.show {
   border-color: var(--menu-divider-color);
 }
 
-/* sidebar osx tab */
+/* Sidebar OSX tab */
 .html-for-mac .sidebar-osx-tab>.sidebar-tabs {
   border: 0px;
 }
 
-/* sidebar footer */
+/* Sidebar footer */
 .sidebar-footer {
   border: 0px;
 }
 
-/* remove outline when file item in treeview is selected*/
+/* Remove outline when file item in treeview is selected */
 .file-library-node:not(.file-node-root):focus>.file-node-content {
   outline: none;
 }
 
-/* sort button on sidebar file menu */
+/* Sort button on sidebar file menu */
+.ty-side-sort-btn {
+  transition: color 0.2s ease;
+}
+
 .ty-side-sort-btn.active,
 .ty-side-sort-btn:hover {
   color: var(--hover-text-color);
 }
 
-/* sidebar in setting */
+/* Sidebar in settings */
 .sidebar {
   background-color: var(--bg-color2) !important;
 }
@@ -704,7 +726,7 @@ input[type="radio"]:checked:before {
   margin-left: 10px !important;
 }
 
-/* sidebar button in setting menu */
+/* Sidebar button in setting menu */
 .nav-group-item {
   color: var(--cat-subtext1) !important;
   border-radius: 6px !important;
@@ -712,7 +734,7 @@ input[type="radio"]:checked:before {
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-/* sidebar button hover in setting menu */
+/* Sidebar button hover in setting menu */
 .nav-group-item:hover,
 .nav-group-item:active {
   background-color: var(--cat-surface0) !important;
@@ -725,76 +747,82 @@ input[type="radio"]:checked:before {
   font-weight: 600;
 }
 
-/* remove up and down button from number type input*/
+/* Remove up and down buttons from number type input */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none !important;
 }
 
-/* the indent example in setting.editor */
+/* The indent example in setting.editor */
 div[data-index="2"] .label-input-group td:last-child div {
   border: 0px !important;
-  border-radius: 6px;
+  border-radius: 8px;
   background-color: var(--bg-color5);
   margin: 10px !important;
 }
 
-/* button in setting menu */
+/* Buttons in setting menu */
 .ty-preferences button.btn-default {
   border: 1px solid var(--cat-surface1);
   background-color: var(--cat-surface0);
-  border-radius: 6px;
+  border-radius: 8px;
   color: var(--cat-text);
   transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
-/* button hover in setting menu */
+/* Button hover in setting menu */
 .ty-preferences .btn-default:not([disabled]):hover {
   background-color: var(--cat-surface1) !important;
   border-color: var(--cat-overlay0) !important;
 }
 
-/* return button in setting menu */
+/* Return button in setting menu */
 .window-header button:hover {
   color: var(--text-color2) !important;
 }
 
-/* search input in setting menu */
+/* Search input in setting menu */
 .search-input {
-  border-top-left-radius: 6px !important;
-  border-bottom-left-radius: 6px !important;
-  border-top-right-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-  margin-top: 10px !important;
-  margin-bottom: 10px !important;
-  margin-left: 10px !important;
+  border-radius: 8px !important; 
+  margin: 10px !important; 
+  width: calc(100% - 20px) !important;
+  box-sizing: border-box !important;
 }
 
 .search-input:focus {
-  border: none !important;
+  border: 1px solid var(--cat-mauve) !important;
+  outline: none;
 }
 
-/* select item (mostly in setting menu) */
+/* Select items (mostly in setting menu) */
 select {
-  border: 0px;
-  border-radius: 6px;
-  background-color: var(--input-color) !important;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
+  background-color: var(--cat-crust) !important;
+  border: 1px solid var(--cat-surface1) !important;
+  border-radius: 8px;
+  color: var(--cat-text) !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  transition: border-color 0.15s ease;
 }
 
-/* enabled select item hover */
+/* Enabled select item hover */
 select:not([disabled]):hover {
-  color: var(--text-color2);
+  border-color: var(--cat-overlay0) !important;
+  color: var(--cat-text);
   opacity: 1;
 }
 
-/* disabled select item hover */
+/* Disabled select item hover */
 select[disabled]:hover {
   opacity: 0.5;
 }
 
-/* mega menu */
+select:focus {
+  border-color: var(--cat-mauve) !important;
+  outline: none;
+}
+
+/* Mega menu */
 .megamenu-content,
 .megamenu-opened header {
   background: var(--bg-color1);
@@ -804,7 +832,7 @@ select[disabled]:hover {
   display: block;
   visibility: hidden;
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .megamenu-opened .megamenu-content {
@@ -813,14 +841,15 @@ select[disabled]:hover {
   animation: none;
 }
 
-/* mega menu sidebar*/
+/* Mega menu sidebar */
 .megamenu-menu {
   background-color: var(--bg-color2);
 }
 
-/* return button in mega menu */
+/* Return button in mega menu */
 #megamenu-menu-sidebar .menu-style-btn {
   border: 0px;
+  transition: background-color 0.2s ease;
 }
 
 .megamenu-menu-panel table td:nth-child(1) {
@@ -828,37 +857,38 @@ select[disabled]:hover {
 }
 
 .megamenu-menu-panel tbody tr:hover td:nth-child(1) {
-  color: var(--cat-text-fade)
+  color: var(--cat-text-fade);
 }
 
-/* remove divider in mega menu */
+/* Remove divider in mega menu */
 .megamenu-menu-header {
   border-color: var(--menu-divider-color);
+  transition: background-color 0.2s ease;
 }
 
-/* return button color in mega menu */
+/* Return button color in mega menu */
 .megamenu-menu-header #megamenu-menu-header-title {
   color: var(--text-color2);
+  transition: color 0.2s ease;
 }
 
-/* return button hover in mega menu */
+/* Return button hover in mega menu */
 .megamenu-menu-header:hover {
   background-color: var(--hover-bg-color1);
 }
 
-/* return button hover in mega menu */
 .megamenu-menu-header:hover #megamenu-menu-header-title {
   color: var(--hover-text-color);
 }
 
-/* long button in mega menu */
+/* Long button in mega menu */
 .long-btn {
   border: 1px solid var(--cat-surface1);
   background-color: var(--cat-surface0);
-  color: var(--cat-text);
+  color: var(--text-color1);
   margin-bottom: 10px;
   margin-left: 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
@@ -867,7 +897,7 @@ select[disabled]:hover {
   border-color: var(--cat-overlay0) !important;
 }
 
-/* recent file in mega menu */
+/* Recent file in mega menu */
 #recent-file-panel {
   padding: 10px;
 }
@@ -875,6 +905,8 @@ select[disabled]:hover {
 #recent-file-panel-action-btn {
   background: var(--bg-color5);
   border: 0px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
 #recent-file-panel thead tr {
@@ -894,52 +926,63 @@ select[disabled]:hover {
   color: var(--text-color2);
 }
 
-/* theme preview hover */
+/* Theme preview hover */
+.theme-preview-div {
+  transition: border-color 0.2s ease;
+  border-radius: 8px;
+}
+
 .theme-preview-div:hover {
   border-color: var(--theme-select-color);
 }
 
-/* context menu and spell check panel */
+/* Context menu and spell check panel */
 .dropdown-menu:not(.megamenu-menu-list) {
   background-color: var(--bg-color2);
   color: var(--text-color2);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* divider in context menu and spell check panel */
+/* Divider in context menu and spell check panel */
 .dropdown-menu .divider {
   border-color: var(--menu-divider-color);
 }
 
-/* remove divider outline */
+/* Remove divider outline */
 .dropdown-menu {
   border: 0px;
 }
 
-/* footer */
+/* Footer */
 footer.ty-footer {
   border-top: 0px !important;
   background-color: var(--bg-color2) !important;
 }
 
-/* footer item */
+/* Footer item */
 .footer-item,
 #outline-btn,
 #footer-word-count {
   color: var(--text-color2);
   opacity: 1;
+  transition: all 0.2s ease;
 }
 
-/* footer item hover */
+/* Footer item hover */
 .footer-item:hover,
 #outline-btn:hover {
   background-color: var(--hover-bg-color1);
   color: var(--hover-text-color);
+  border-radius: 4px;
 }
 
-/* button on some panel */
+/* Buttons on some panels */
 .btn {
   border: 0px;
   outline-width: 0px !important;
+  transition: all 0.2s ease;
+  border-radius: 4px;
 }
 
 .btn:hover {
@@ -947,48 +990,50 @@ footer.ty-footer {
   color: var(--hover-text-color);
 }
 
-/* traffic button hover */
+/* Traffic button hover */
 #top-titlebar .toolbar-icon.btn:hover {
   color: var(--text-color2);
   background-color: var(--hover-bg-color1);
 }
 
-/* traffic button hover */
+/* Traffic close button hover */
 #top-titlebar #w-close:hover {
   background-color: #e81123 !important;
 }
 
-/* adjust maxmize restore button height */
+/* Adjust maximize restore button height */
 .typora-maxmized #w-restore {
   height: 24px;
 }
 
-/* left upper button hover */
+/* Left upper button hover */
 .ty-menu-btn-area:hover .ty-menu-btn-area-sub {
   color: var(--text-color2) !important;
 }
 
-/* scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px !important;
-  background-color: transparent !important;
+  width: 12px !important;
+  background-color: var(--scrollbar-track-color) !important;
 }
 
-/* scrollbar track */
+/* Scrollbar track */
 ::-webkit-scrollbar-track {
-  background-color: transparent !important;
+  background-color: var(--scrollbar-track-color) !important;
   border-radius: 0px;
 }
 
-/* scrollbar thumb */
+/* Scrollbar thumb */
 ::-webkit-scrollbar-thumb {
   background-color: var(--cat-surface1) !important;
-  border-radius: 8px !important;
-  border: 2px solid var(--cat-base) !important;
+  border-radius: 10px !important;
+  /* The border trick creates space around the scrollbar without clipping it */
+  border: 3px solid var(--scrollbar-track-color) !important;
   min-height: 40px;
+  transition: background-color 0.2s ease;
 }
 
-/* scrollbar thumb hover and active */
+/* Scrollbar thumb hover and active */
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--cat-overlay0) !important;
 }
@@ -997,42 +1042,44 @@ footer.ty-footer {
   background-color: var(--cat-mauve) !important;
 }
 
-/* tip when hover on a button */
+/* Tooltip when hovering on a button */
 #ty-tooltip {
   background-color: var(--bg-color4);
   color: var(--text-color4);
+  border-radius: 4px;
 }
 
-/* item container hover in context menu */
+/* Item container hover in context menu */
 .menu-item-container:hover {
   background-color: var(--bg-color2);
 }
 
-/* item in context menu */
+/* Item in context menu */
 .menu-item-container .menu-style-btn {
   border-color: var(--menu-divider-color);
 }
 
-/* mathjax edit panel*/
+/* Mathjax edit panel */
 .md-rawblock-before {
-  border-top-left-radius: 6px;
+  border-top-left-radius: 8px;
 }
 
 .md-rawblock-after {
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
-/* mathjax focus */
+/* Mathjax focus */
 .MathJax_SVG:focus {
   outline: none;
   background-color: transparent;
 }
 
-/* notification panel */
+/* Notification panel */
 #md-notification {
   background-color: var(--cat-red) !important;
   color: var(--cat-base);
+  border-radius: 8px;
 }
 
 #ty-surpress-mode-warning-close-btn {
@@ -1044,35 +1091,34 @@ footer.ty-footer {
   bottom: -4px !important;
 }
 
-/* inline codeblock */
+/* Inline codeblock */
 code {
   font-family: var(--monospace);
-  font-size: 0.85em;
-  background-color: var(--cat-crust);
-  border-radius: 4px;
-  padding: 2px 6px;
-  margin: 0 1px;
-  color: var(--cat-peach);
-  border: 1px solid var(--cat-surface0);
+  font-size: 0.9em;
+  background-color: var(--bg-color5);
+  border-radius: 6px;
+  padding: 4px 6px;
+  margin: 0px;
 }
 
-/* codeblock */
+/* Codeblocks */
 .md-fences,
 .md-fences:active {
-  background-color: var(--cat-crust);
+  background-color: var(--bg-color5);
   border-radius: 8px;
+  padding: 8px 4px !important;
+  margin-top: 15px;
+  margin-bottom: 15px;
   border: 1px solid var(--cat-surface0);
-  padding: 12px 4px 12px 4px !important;
-  margin-top: 16px;
-  margin-bottom: 16px;
 }
 
 .md-fences .code-tooltip {
   display: block !important;
   visibility: hidden;
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.3s ease;
   background-color: var(--bg-color3);
+  border-radius: 8px;
 }
 
 .md-fences.md-focus .code-tooltip {
@@ -1081,10 +1127,10 @@ code {
 }
 
 .CodeMirror-lines {
-  padding-left: 4px;
+  padding-left: 8px;
 }
 
-/* selected text and cursor */
+/* Selected text and cursor */
 .CodeMirror-selected,
 .CodeMirror-selectedtext {
   background: var(--code-select-bg-color) !important;
@@ -1207,34 +1253,34 @@ code {
   color: var(--code-red-color);
 }
 
-/* math formula tag */
+/* Math formula tag */
 .cm-s-inner .cm-atom,
 .cm-s-inner.cm-atom {
   color: var(--code-blue-color);
 }
 
-/* inline codeblock in source mode */
+/* Inline codeblock in source mode */
 .cm-s-typora-default .cm-comment {
   color: var(--code-green-color);
 }
 
-/* horizontal divider when language is markdown */
+/* Horizontal divider when language is markdown */
 .cm-s-inner .cm-hr {
   color: var(--text-color1);
 }
 
-/* variable type when language is c/cpp */
+/* Variable type when language is C/C++ */
 .cm-s-inner .cm-variable-3 {
   color: var(--code-purple-color);
 }
 
-/* in pie chart and flowchart */
+/* Pie chart and flowchart */
 .cm-s-inner .cm-quote,
 .cm-s-inner.cm-quote {
   color: var(--code-green-color);
 }
 
-/* unknown highlight keyword */
+/* Unknown highlight keyword */
 .cm-s-inner .cm-link {
   color: var(--code-blue-color);
 }
@@ -1255,7 +1301,7 @@ code {
   border-right: none;
 }
 
-/* focus mode */
+/* Focus mode */
 .on-focus-mode .md-end-block:not(.md-focus) .md-toc-item {
   opacity: 0.5;
 }
@@ -1280,22 +1326,20 @@ code {
   border-color: var(--text-color5);
 }
 
-/* YAML block */
+/* YAML blocks */
 pre.md-meta-block,
 pre.md-meta-block:active {
   background-color: var(--bg-color5);
-  border-radius: 6px;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  border-radius: 8px;
+  padding: 12px 20px;
 }
 
-/* switch between different mode */
+/* Switch between different modes */
 #typora-source {
   display: block !important;
   visibility: hidden;
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .typora-sourceview-on #typora-source {
@@ -1313,7 +1357,7 @@ pre.md-meta-block:active {
   display: block !important;
   visibility: visible;
   opacity: 1;
-  transition: 0.3s;
+  transition: 0.3s ease;
   max-width: 1200px;
   padding-left: 70px;
   padding-right: 70px;
@@ -1328,7 +1372,7 @@ pre.md-meta-block:active {
   display: block;
   visibility: hidden;
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .show-preference-panel .uni-preference-panel {
@@ -1336,22 +1380,30 @@ pre.md-meta-block:active {
   opacity: 1;
 }
 
-/* quick open menu */
+/* Quick open menu */
+.typora-quick-open-item {
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
 .typora-quick-open-item:hover {
   background-color: var(--hover-bg-color1);
   color: var(--hover-text-color);
 }
 
-/* insert table panel */
+/* Insert table panel */
 .modal-content {
   border: 0px;
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 .modal-content .btn-primary {
   background-color: var(--hover-bg-color1);
   color: var(--text-color1);
   outline-width: 0px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
 }
 
 .modal-content .btn-primary:hover {
@@ -1363,21 +1415,25 @@ pre.md-meta-block:active {
   opacity: 0.3 !important;
 }
 
-/* zoom  */
+/* Zoom hints */
 #zoom-hint #zoom-hint-reset {
   color: var(--text-color1);
+}
+
+#zoom-hint .zoom-hint-button {
+  transition: color 0.2s ease;
 }
 
 #zoom-hint .zoom-hint-button:hover {
   color: var(--hover-text-color) !important;
 }
 
-/* word count */
+/* Word count panel */
 #footer-word-count-info {
   display: block;
   visibility: hidden;
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .ty-show-word-count #footer-word-count-info {
@@ -1385,12 +1441,12 @@ pre.md-meta-block:active {
   opacity: 1;
 }
 
-/* spell check */
+/* Spell check panel */
 #spell-check-panel {
   display: block;
   visibility: hidden;
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .ty-show-spell-check #spell-check-panel {
@@ -1398,21 +1454,28 @@ pre.md-meta-block:active {
   opacity: 1;
 }
 
-/* search result */
+/* Search results */
 .md-search-select {
   border: 2px solid var(--cat-sky);
   box-sizing: content-box;
   color: var(--text-color1) !important;
+  border-radius: 2px;
 }
 
 .md-search-hit {
   background-color: var(--search-select-bg-color);
 }
 
-/* search panel message */
+/* Search panel messages */
 #searchpanel-msg {
   background-color: var(--bg-color2);
   color: var(--text-color2);
+  border-radius: 4px;
+}
+
+.searchpanel-msg-btn {
+  transition: all 0.2s ease;
+  border-radius: 4px;
 }
 
 .searchpanel-msg-btn:hover {
@@ -1420,13 +1483,19 @@ pre.md-meta-block:active {
   color: var(--hover-text-color);
 }
 
-/* language selection for codeblock */
+/* Language selection for codeblock */
 .auto-suggest-container {
   border: 0px;
   background-color: var(--bg-color2);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* sidebar outline item hover and active */
+/* Sidebar outline item hover and active states */
+.outline-item {
+  transition: color 0.2s ease;
+}
+
 .outline-item:hover {
   color: var(--hover-text-color);
 }
@@ -1439,31 +1508,41 @@ pre.md-meta-block:active {
   color: var(--hover-text-color);
 }
 
-/* sidebar title hover */
+/* Sidebar title hover */
+.info-panel-tab {
+  transition: color 0.2s ease;
+}
+
 .info-panel-tab:hover {
   color: var(--hover-text-color) !important;
 }
 
-/* active file in sidebar file menu tree view */
+/* Active file in sidebar file menu tree view */
 .file-tree-node.active>.file-node-background {
   background-color: var(--hover-bg-color1);
+  border-radius: 4px;
 }
 
-/* hover file in sidebar file menu tree view */
+/* Hover file in sidebar file menu tree view */
 .file-tree-node:hover > .file-node-content,
 .file-node-content:hover {
   color: var(--cat-mauve);
   cursor: pointer;
+  transition: color 0.2s ease;
 }
 
-/* saved button in megamenu */
+/* Saved button in megamenu */
+#m-saved {
+  transition: all 0.2s ease;
+}
+
 #m-saved:hover {
   background-color: var(--bg-color2);
   color: var(--text-color2);
   cursor: default;
 }
 
-/* mermaid flowchart */
+/* Mermaid flowcharts */
 .node rect,
 .node circle,
 .node ellipse,
@@ -1488,9 +1567,10 @@ pre.md-meta-block:active {
 .cluster rect {
   fill: var(--bg-color5) !important;
   stroke: var(--menu-divider-color) !important;
+  rx: 8px !important; /* Adding slight radius to cluster borders if supported */
 }
 
-/* mermaid sequence*/
+/* Mermaid sequences */
 text.actor {
   fill: var(--text-color1) !important;
 }
@@ -1533,7 +1613,7 @@ rect[class*="activation"] {
   fill: var(--text-color1) !important;
 }
 
-/* mermaid class */
+/* Mermaid classes */
 g.classGroup text {
   fill: var(--text-color) !important;
 }
@@ -1571,7 +1651,7 @@ g.classGroup line {
   fill: var(--text-color) !important;
 }
 
-/* mermaid state v1 */
+/* Mermaid states v1 */
 .stateGroup rect,
 .stateGroup line {
   fill: var(--bg-color2) !important;
@@ -1613,7 +1693,7 @@ g.classGroup line {
   stroke: var(--menu-divider-color) !important;
 }
 
-/* mermaid state v2*/
+/* Mermaid states v2 */
 .state-start {
   fill: var(--bg-color4) !important;
   stroke: var(--menu-divider-color) !important;
@@ -1661,7 +1741,7 @@ g.classGroup line {
   fill: var(--menu-divider-color) !important;
 }
 
-/* mermaid journey */
+/* Mermaid journeys */
 .journey-section {
   fill: var(--bg-color5) !important;
   stroke: var(--menu-divider-color) !important;
@@ -1706,7 +1786,7 @@ pre[mermaid-type="journey"] g line {
   stroke: var(--menu-divider-color) !important;
 }
 
-/* mermaid erDiagram */
+/* Mermaid erDiagrams */
 pre[mermaid-type="erDiagram"] rect {
   fill: var(--bg-color2) !important;
 }
@@ -1726,7 +1806,7 @@ pre[mermaid-type="erDiagram"] path {
   fill: var(--bg-color) !important;
 }
 
-/* mermaid gantt */
+/* Mermaid gantt charts */
 .titleText {
   fill: var(--text-color1) !important;
 }
@@ -1818,7 +1898,7 @@ pre[mermaid-type="erDiagram"] path {
   stroke: var(--text-color1) !important;
 }
 
-/* mermaid pie chart */
+/* Mermaid pie charts */
 g.legend>text {
   fill: var(--text-color1) !important;
 }
@@ -1835,7 +1915,7 @@ g>text.slice {
   fill: var(--bg-color) !important;
 }
 
-/* flow diagram */
+/* Flow diagrams */
 .md-fences[lang="flow"] .md-diagram-panel-preview rect {
   fill: var(--bg-color2) !important;
   stroke: var(--menu-divider-color) !important;
@@ -1851,7 +1931,7 @@ g>text.slice {
   fill: var(--bg-color2) !important;
 }
 
-/* sequence diagram */
+/* Sequence diagrams */
 .md-fences[lang="sequence"] .md-diagram-panel-preview rect:not([fill="none"]) {
   fill: var(--bg-color2) !important;
   stroke: var(--menu-divider-color) !important;
@@ -1869,24 +1949,25 @@ g>text.slice {
   font-family: var(--monospace) !important;
 }
 
-/* remove border when edit graph */
+/* Remove borders when editing graphs */
 .md-diagram-panel {
   border: none !important;
 }
 
+/* Modern Keyboard input styles (Keycap effect) */
 kbd {
-  background: var(--cat-surface0);
-  color: var(--cat-text);
+  background: var(--bg-color5);
+  color: var(--text-color1);
   font-family: var(--monospace);
-  font-size: 0.8em;
-  border: 1px solid var(--cat-surface2);
-  border-bottom-width: 2px;
-  border-radius: 4px;
+  border: 1px solid var(--menu-divider-color);
+  border-bottom: 2px solid var(--cat-surface1);
+  border-radius: 6px;
   padding: 2px 6px;
-  box-shadow: inset 0 -1px 0 var(--cat-surface2);
+  font-size: 0.85em;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
-/* syntax error and escape character fixes */
+/* Syntax error and escape character fixes */
 .cm-s-inner .cm-error,
 .cm-s-inner.cm-error {
   color: var(--cat-red) !important;
@@ -1901,152 +1982,7 @@ kbd {
   color: var(--cat-teal) !important;
 }
 
-/* command line attributes and parameters */
+/* Command line attributes and parameters */
 .cm-s-inner .cm-attribute {
   color: var(--cat-yellow) !important;
-}
-
-/* =============================================
-   MODERN REFINEMENTS (catppuccin v2)
-   ============================================= */
-
-/* smooth link transitions */
-a, #write a:not([role="menuitem"]) {
-  transition: color 0.15s ease;
-}
-
-/* horizontal rule with gradient */
-hr {
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--cat-surface1), transparent);
-  border: 0;
-  margin: 1.5em 0;
-}
-
-/* modern focus ring */
-:focus-visible {
-  outline: 2px solid var(--cat-mauve);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/* sidebar file item - smooth transitions */
-#file-library .file-list-item {
-  transition: background-color 0.12s ease, border-color 0.12s ease;
-}
-
-/* mark/highlight tag */
-mark {
-  background-color: rgba(249, 226, 175, 0.25);
-  color: var(--cat-yellow);
-  border-radius: 3px;
-  padding: 1px 3px;
-}
-
-/* selection color */
-::selection {
-  background-color: rgba(203, 166, 247, 0.3);
-  color: var(--cat-text);
-}
-
-/* strong/bold accent */
-#write strong {
-  color: var(--cat-peach);
-  font-weight: 700;
-}
-
-/* em/italic accent */
-#write em {
-  color: var(--cat-flamingo);
-  font-style: italic;
-}
-
-/* strikethrough */
-#write del {
-  color: var(--cat-overlay1);
-  text-decoration: line-through;
-}
-
-/* better footnote styling */
-sup.md-footnote {
-  color: var(--cat-mauve);
-  background-color: rgba(203, 166, 247, 0.12);
-  border-radius: 3px;
-  padding: 0 3px;
-  font-size: 0.75em;
-}
-
-/* input fields - modern look */
-input:not([type="checkbox"]):not([type="radio"]) {
-  background-color: var(--cat-crust) !important;
-  border: 1px solid var(--cat-surface1) !important;
-  border-radius: 6px !important;
-  color: var(--cat-text) !important;
-  transition: border-color 0.15s ease !important;
-}
-
-input:not([type="checkbox"]):not([type="radio"]):focus {
-  border-color: var(--cat-mauve) !important;
-  outline: none !important;
-}
-
-/* select inputs */
-select {
-  background-color: var(--cat-crust) !important;
-  border: 1px solid var(--cat-surface1) !important;
-  border-radius: 6px;
-  color: var(--cat-text) !important;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
-  transition: border-color 0.15s ease;
-}
-
-select:not([disabled]):hover {
-  border-color: var(--cat-overlay0) !important;
-  color: var(--cat-text);
-  opacity: 1;
-}
-
-select:focus {
-  border-color: var(--cat-mauve) !important;
-  outline: none;
-}
-
-/* tooltip modernization */
-#ty-tooltip {
-  background-color: var(--cat-surface0);
-  color: var(--cat-text);
-  border: 1px solid var(--cat-surface1);
-  border-radius: 6px;
-  font-size: 0.8em;
-  padding: 4px 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-/* context menu modernization */
-.dropdown-menu:not(.megamenu-menu-list) {
-  background-color: var(--cat-mantle);
-  color: var(--cat-text);
-  border: 1px solid var(--cat-surface0);
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  padding: 4px;
-}
-
-.dropdown-menu>li>a {
-  border-radius: 5px;
-  padding: 5px 10px;
-  transition: background-color 0.1s ease, color 0.1s ease;
-}
-
-.dropdown-menu>li>a:hover {
-  background-color: var(--cat-surface0);
-  color: var(--cat-mauve);
-}
-
-/* search panel modernization */
-#md-searchpanel {
-  background-color: var(--cat-mantle);
-  border-bottom: 1px solid var(--cat-surface0);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
