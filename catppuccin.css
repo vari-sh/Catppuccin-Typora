@@ -3,17 +3,32 @@
 
 :root {
   /* Catppuccin Mocha Official Spec Colors */
-  --cat-base: #1e1e2e;
-  --cat-surface1: #45475a;
-  --cat-text: #cdd6f4;
-  --cat-overlay0: #6c7086;
-  --cat-sky: #89dceb;
-  --cat-green: #a6e3a1;
-  --cat-peach: #fab387;
-  --cat-pink: #f5c2e7;
-  --cat-mauve: #cba6f7;
-  --cat-red: #f38ba8;
-  --cat-yellow: #f9e2af;
+  --cat-rosewater: #f5e0dc;
+  --cat-flamingo:  #f2cdcd;
+  --cat-pink:      #f5c2e7;
+  --cat-mauve:     #cba6f7;
+  --cat-red:       #f38ba8;
+  --cat-maroon:    #eba0ac;
+  --cat-peach:     #fab387;
+  --cat-yellow:    #f9e2af;
+  --cat-green:     #a6e3a1;
+  --cat-teal:      #94e2d5;
+  --cat-sky:       #89dceb;
+  --cat-sapphire:  #74c7ec;
+  --cat-blue:      #89b4fa;
+  --cat-lavender:  #b4befe;
+  --cat-text:      #cdd6f4;
+  --cat-subtext1:  #bac2de;
+  --cat-subtext0:  #a6adc8;
+  --cat-overlay2:  #9399b2;
+  --cat-overlay1:  #7f849c;
+  --cat-overlay0:  #6c7086;
+  --cat-surface2:  #585b70;
+  --cat-surface1:  #45475a;
+  --cat-surface0:  #313244;
+  --cat-base:      #1e1e2e;
+  --cat-mantle:    #181825;
+  --cat-crust:     #11111b;
 
   /* Custom colors for Typora */
   --cat-text-fade: rgba(205, 214, 244, 0.5);
@@ -66,14 +81,14 @@
   --focus-ring-color: var(--focus-color);
   
   /* codeblock color */
-  --code-red-color: var(--cat-pink);
+  --code-red-color: var(--cat-red);
   --code-yellow-color: var(--cat-yellow);
-  --code-cyan-color: var(--cat-sky);
-  --code-blue-color: var(--cat-sky);
+  --code-cyan-color: var(--cat-teal);
+  --code-blue-color: var(--cat-blue);
   --code-purple-color: var(--cat-mauve);
-  --code-orange-color: var(--cat-yellow);
+  --code-orange-color: var(--cat-peach);
   --code-green-color: var(--cat-green);
-  --code-grey-color: var(--cat-overlay0);
+  --code-grey-color: var(--cat-overlay2);
 
   --code-select-bg-color: var(--cat-surface1);
   --code-cursor-color: var(--cat-text);
@@ -925,22 +940,32 @@ footer.ty-footer {
 
 /* scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  padding-right: 10px;
-  background-color: var(--scrollbar-track-color);
+  width: 12px !important;
+  background-color: var(--scrollbar-track-color) !important;
 }
 
 /* scrollbar track */
-::-webkit-scrollbar-track:hover {
+::-webkit-scrollbar-track {
   background-color: var(--scrollbar-track-color) !important;
-  border-radius: 4px;
+  border-radius: 0px;
 }
 
 /* scrollbar thumb */
-::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  background-color: var(--cat-surface1) !important;
+  border-radius: 10px !important;
+  /* Il trucco del bordo crea lo spazio intorno alla barra senza tagliarla */
+  border: 3px solid var(--scrollbar-track-color) !important;
+  min-height: 40px;
+}
+
+/* scrollbar thumb hover and active */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--cat-overlay0) !important;
+}
+
 ::-webkit-scrollbar-thumb:active {
-  background-color: var(--scrollbar-thumb-color) !important;
-  border-radius: 4px;
+  background-color: var(--cat-mauve) !important;
 }
 
 /* tip when hover on a button */
@@ -1042,7 +1067,6 @@ code {
   border-left: 3px solid var(--code-cursor-color);
 }
 
-/* highlight */
 .cm-s-inner .cm-property {
   color: var(--code-blue-color) !important;
 }
@@ -1056,11 +1080,11 @@ code {
 }
 
 .cm-s-inner .cm-tag {
-  color: var(--code-red-color) !important;
+  color: var(--code-blue-color) !important;
 }
 
 .cm-s-inner .cm-attribute {
-  color: var(--code-orange-color) !important;
+  color: var(--code-yellow-color) !important;
 }
 
 .cm-s-inner .cm-string {
@@ -1070,7 +1094,6 @@ code {
 .cm-s-inner .cm-comment,
 .cm-s-inner.cm-comment {
   color: var(--code-grey-color) !important;
-  font-style: italic;
 }
 
 .cm-s-inner .cm-header,
@@ -1086,11 +1109,11 @@ code {
 }
 
 .cm-s-inner .cm-builtin {
-  color: var(--code-cyan-color) !important;
+  color: var(--code-purple-color) !important;
 }
 
 .cm-s-inner .cm-bracket {
-  color: var(--text-color1) !important;
+  color: var(--cat-overlay2) !important;
 }
 
 .cm-s-inner .cm-number {
@@ -1102,49 +1125,46 @@ code {
 }
 
 .cm-s-inner .cm-variable-2 {
-  color: var(--code-yellow-color) !important;
+  color: var(--code-blue-color) !important;
 }
 
-.cm-s-typora-default .cm-header,
+.cm-s-typora-default .cm-header {
+  color: var(--cat-red) !important;
+}
+
 .cm-s-typora-default .cm-property {
-  color: var(--code-red-color) !important;
+  color: var(--cat-mauve) !important;
 }
 
 .cm-s-typora-default .cm-string {
-  color: var(--code-purple-color);
+  color: var(--cat-green) !important;
 }
 
 .cm-s-typora-default .cm-atom {
-  color: var(--code-grey-color);
-  font-style: italic;
+  color: var(--cat-peach) !important;
 }
 
 .cm-s-typora-default .cm-number {
   color: var(--code-orange-color);
-  font-style: normal !important;
 }
 
 .cm-s-typora-default .cm-link {
-  color: var(--code-blue-color);
-}
-
-.cm-s-typora-default .CodeMirror-activeline-background {
-  background: var(--hover-bg-color1);
+  color: var(--cat-blue);
 }
 
 .cm-s-typora-default .cm-comment,
 .cm-s-typora-default .cm-code {
-  color: var(--code-purple-color);
+  color: var(--cat-green);
 }
 
 .cm-s-typora-default .cm-tag {
-  color: var(--code-blue-color);
+  color: var(--cat-blue);
 }
 
 .cm-s-typora-default .cm-strong,
 .cm-s-typora-default .cm-em,
 .cm-s-typora-default .cm-del {
-  color: var(--code-orange-color);
+  color: var(--cat-maroon);
 }
 
 .cm-s-typora-default .cm-block-start.cm-variable-2 {
@@ -1827,4 +1847,24 @@ kbd {
   color: var(--text-color1);
   font-family: var(--monospace);
   border-color: var(--menu-divider-color);
+}
+
+/* syntax error and escape character fixes */
+.cm-s-inner .cm-error,
+.cm-s-inner.cm-error {
+  color: var(--cat-red) !important;
+  background-color: transparent !important;
+}
+
+.cm-s-inner .cm-meta {
+  color: var(--cat-flamingo) !important;
+}
+
+.cm-s-inner .cm-string-2 {
+  color: var(--cat-teal) !important;
+}
+
+/* command line attributes and parameters */
+.cm-s-inner .cm-attribute {
+  color: var(--cat-yellow) !important;
 }
